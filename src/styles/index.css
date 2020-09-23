@@ -1,0 +1,35 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #f5f6f7;
+}
+
+.button {
+    cursor: pointer;
+    padding: 5px 25px;
+    font-size: 16px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border: 2px solid #20A4F3;
+    text-decoration: none;
+    color: #20A4F3;
+    font-weight: bold;
+}
+
+.fill {
+    background-color: #20A4F3;
+    color: #f5f6f7;
+}
+
+.main {
+    padding: 10px 50px;
+}
+
+.route {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    flex-direction: column;
+}
