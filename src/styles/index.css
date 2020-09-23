@@ -17,6 +17,8 @@ html, body {
     text-decoration: none;
     color: #20A4F3;
     font-weight: bold;
+    margin: 5px;
+    display: inline-block;
 }
 
 .fill {
@@ -31,7 +33,52 @@ html, body {
 .route {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    min-height: 100vh;
+    justify-content: space-evenly;
+    min-height: 95vh;
     flex-direction: column;
+}
+
+.route>* {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #333333;
+    color: #f2f3f6;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.title {
+    font-size: 28px;
+}
+
+.meditation {
+    width: 40%;
+    height: auto;
+}
+
+#dress {
+    position: relative;
+    animation: 1000ms breathing infinite ease-out alternate;
+}
+
+@keyframes breathing {
+    from {
+        transform: translateY(2px);
+    }
+
+    to {
+        transform: translateY(-8px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .meditation {
+        width: 80%;
+    }
 }
