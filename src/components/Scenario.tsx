@@ -9,7 +9,7 @@ const Scenario: FC = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            // history.push(`/answer/${index}`);
+            history.push(`/answer/${index}`);
         }, 9000);
     }, []);
 

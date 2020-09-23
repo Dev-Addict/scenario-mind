@@ -8,7 +8,7 @@ const Answer: FC = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            history.push(`/rest/${index}`);
+            // history.push(`/rest/${index}`);
         }, 4000);
     }, [index]);
 
@@ -16,20 +16,32 @@ const Answer: FC = () => {
         <div className="route">
             <div>
                 <div>
-                    <input type="radio" name="answer" value={1} checked/><
-                    label>گزینه 1</label>
+                    <label className="input-container">
+                        گزینه 1
+                        <input type="radio" name="answer" value={1} checked/>
+                        <span className="checkmark"/>
+                    </label>
                 </div>
                 <div>
-                    <input type="radio" name="answer" value={2}/>
-                    <label>گزینه 2</label>
+                    <label className="input-container">
+                        گزینه 2
+                        <input type="radio" name="answer" value={2}/>
+                        <span className="checkmark"/>
+                    </label>
                 </div>
                 <div>
-                    <input type="radio" name="answer" value={3}/>
-                    <label>گزینه 3</label>
+                    <label className="input-container">
+                        گزینه 3
+                        <input type="radio" name="answer" value={3}/>
+                        <span className="checkmark"/>
+                    </label>
                 </div>
                 <div>
-                    <input type="radio" name="answer" value={4}/>
-                    <label>گزینه 4</label>
+                    <label className="input-container">
+                        گزینه 4
+                        <input type="radio" name="answer" value={4}/>
+                        <span className="checkmark"/>
+                    </label>
                 </div>
             </div>
         </div>
