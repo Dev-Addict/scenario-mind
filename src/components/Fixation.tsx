@@ -2,6 +2,7 @@ import React, {FC, useEffect} from "react";
 import {useParams} from 'react-router-dom';
 
 import history from "../history";
+import Relax from "../assets/Relax";
 
 type Props = {
     isRest?: boolean;
@@ -21,7 +22,8 @@ const Fixation: FC<Props> = ({isRest = false}) => {
 
     return (
         <div className="route">
-            آمادگی کسب کنید.
+            <div className="title">آمادگی کسب کنید.</div>
+            <Relax/>
         </div>
     );
 };

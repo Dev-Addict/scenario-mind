@@ -57,7 +57,7 @@ html, body {
     font-size: 28px;
 }
 
-.meditation {
+svg {
     width: 40%;
     height: auto;
 }
@@ -77,8 +77,24 @@ html, body {
     }
 }
 
+#hand {
+    position: relative;
+    animation: 1000ms shake infinite linear alternate;
+    transform-origin: 80% 80%;
+    transform: translate(-10%, -10%);
+}
+
+@keyframes shake {
+    from {
+        transform: translate(-7.5%, -7.5%)rotateZ(2deg);
+    }
+    to {
+        transform: translate(-7.5%, -7.5%)rotateZ(-2deg);
+    }
+}
+
 @media screen and (max-width: 600px) {
-    .meditation {
+    svg {
         width: 80%;
     }
 }
