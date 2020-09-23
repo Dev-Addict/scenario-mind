@@ -3,12 +3,19 @@ import {useParams} from 'react-router-dom';
 
 import history from "../history";
 
-const Fixation: FC = () => {
+type Props = {
+    isRest?: boolean;
+};
+
+const Fixation: FC<Props> = ({isRest = false}) => {
     const {index} = useParams();
 
     useEffect(() => {
         setTimeout(() => {
-            history.push(`/scenario/${index}`);
+            if (isRest)
+                history.push(`/ready/${+index + 1}`);
+            else
+                history.push(`/scenario/${+index}`);
         }, Math.random() * 2000 + 1000);
     }, [index]);
 

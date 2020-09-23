@@ -17,6 +17,9 @@ function App() {
         <Router history={history}>
             <div>
                 <Switch>
+                    <Route path="/rest/:index">
+                        <Fixation isRest={true}/>
+                    </Route>
                     <Route path="/answer/:index">
                         <Answer/>
                     </Route>
