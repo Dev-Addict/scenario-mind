@@ -10,12 +10,16 @@ import Start from "./Start";
 import Instruction from "./Instruction";
 import Fixation from "./Fixation";
 import Scenario from "./Scenario";
+import Answer from "./Answer";
 
 function App() {
     return (
         <Router history={history}>
             <div>
                 <Switch>
+                    <Route path="/answer/:index">
+                        <Answer/>
+                    </Route>
                     <Route path="/scenario/:index">
                         <Scenario/>
                     </Route>
