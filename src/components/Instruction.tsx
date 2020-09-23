@@ -5,7 +5,7 @@ import history from "../history";
 const Instruction: FC = () => {
     useEffect(() => {
         setTimeout(() => {
-            history.push('/ready/1')
+            history.push('/ready/1');
         }, 1700);
     }, []);
 
