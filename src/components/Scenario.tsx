@@ -3,20 +3,20 @@ import {useParams} from 'react-router-dom';
 
 import history from "../history";
 
-const Fixation: FC = () => {
+const Scenario: FC = () => {
     const {index} = useParams();
 
     useEffect(() => {
         setTimeout(() => {
-            history.push(`/scenario/${index}`);
-        }, Math.random() * 2000 + 1000);
-    }, [index]);
+            history.push(`/answer/${index}`);
+        }, 9000);
+    }, []);
 
     return (
         <div className="route">
-            آمادگی کسب کنید.
+            سناریو
         </div>
     );
 };
 
-export default Fixation;
+export default Scenario;
