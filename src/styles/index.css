@@ -86,6 +86,7 @@ input[type="radio"] {
     height: 25px;
     width: 25px;
     background-color: #00000044;
+    transition: all 500ms;
 }
 
 .input-container:hover input ~ .checkmark {
@@ -104,6 +105,7 @@ input[type="radio"]:checked ~ .checkmark {
 
 input[type="radio"]:checked ~ .checkmark:after {
     display: block;
+    animation: linear checkmark 500ms;
 }
 .input-container .checkmark:after {
     left: 9px;
@@ -120,6 +122,20 @@ input[type="radio"]:checked ~ .checkmark:after {
 svg {
     width: 40%;
     height: auto;
+}
+
+@keyframes checkmark {
+    0% {
+        transform: rotate(0deg)translateX(-20px);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg)translateX(0);
+    }
 }
 
 #dress {
@@ -150,6 +166,21 @@ svg {
     }
     to {
         transform: translate(-7.5%, -7.5%)rotateZ(-2deg);
+    }
+}
+
+#pen {
+    position: relative;
+    animation: 1000ms write infinite linear alternate;
+}
+
+@keyframes write {
+    from {
+        transform: translateX(-2px);
+    }
+
+    to {
+        transform: translateX(2px);
     }
 }
 

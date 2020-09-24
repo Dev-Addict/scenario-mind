@@ -10,7 +10,7 @@ export const questionsReducer = (state = initialState, action: QuestionsActionTy
         case SET_QUESTIONS:
             return {
                 questions: action.payload,
-                answers: new Array(action.payload.length).map(() => 1)
+                answers: new Array(action.payload.length)
             };
         case SET_ANSWER:
             const answers = {...state.answers};

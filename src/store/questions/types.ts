@@ -26,7 +26,7 @@ interface SetAnswer {
 
 export interface QuestionsState {
     questions: Question[];
-    answers: (1|2|3|4)[];
+    answers: (1|2|3|4|undefined)[];
 }
 
 export type QuestionsActionTypes = SetQuestions | SetAnswer;
