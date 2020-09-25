@@ -3,7 +3,6 @@ import {useParams} from 'react-router-dom';
 import {useSelector} from "react-redux";
 
 import history from "../history";
-import Relax from "../assets/Relax";
 import {RootState} from "../store";
 
 type Props = {
@@ -18,19 +17,17 @@ const Fixation: FC<Props> = ({isRest = false}) => {
     useEffect(() => {
         setTimeout(() => {
             if (isRest) {
-                if (index === length)
+                if (+index === length)
                     history.push('/result');
                 else
                     history.push(`/ready/${+index + 1}`);
             } else
                 history.push(`/scenario/${+index}`);
         }, Math.random() * 2000 + 1000);
-    }, [index, isRest]);
+    }, [index, isRest, length]);
 
     return (
-        <div className="route">
-            <div className="title">آمادگی کسب کنید.</div>
-            <Relax/>
+        <div className="route relax">
         </div>
     );
 };

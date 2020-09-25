@@ -34,7 +34,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    min-height: 95vh;
+    min-height: 100vh;
     flex-direction: column;
 }
 
@@ -43,149 +43,43 @@ html, body {
     margin-bottom: 20px;
 }
 
-.footer {
-    background-color: #333333;
+.relax {
+    background-color: #f2f3f6;
+    cursor: none;
+}
+
+.answer-box {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+}
+
+.answer-item {
+    padding: 10px 20px;
     color: #f2f3f6;
+    width: 20%;
+    border-right: solid 1px #f2f3f6;
+    border-left: solid 1px #f2f3f6;
     text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.title {
-    font-size: 28px;
-}
-
-.input-container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
     cursor: pointer;
-    font-size: 16px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    margin-top: 12px;
+    opacity: 1;
+    transition: all 300ms;
 }
 
-input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+.answer-item.hard {
+    background-color: #FC3401;
 }
 
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #00000044;
-    transition: all 500ms;
+.answer-item.medium {
+    background-color: #20C722;
 }
 
-.input-container:hover input ~ .checkmark {
-    background-color: #00000066;
+.answer-item.easy {
+    background-color: #9BA99A;
 }
 
-input[type="radio"]:checked ~ .checkmark {
-    background-color: #20A4F3;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-input[type="radio"]:checked ~ .checkmark:after {
-    display: block;
-    animation: linear checkmark 500ms;
-}
-.input-container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-svg {
-    width: 40%;
-    height: auto;
-}
-
-@keyframes checkmark {
-    0% {
-        transform: rotate(0deg)translateX(-20px);
-    }
-
-    50% {
-        transform: rotate(180deg);
-    }
-
-    100% {
-        transform: rotate(360deg)translateX(0);
-    }
-}
-
-#dress {
-    position: relative;
-    animation: 1000ms breathing infinite ease-out alternate;
-}
-
-@keyframes breathing {
-    from {
-        transform: translateY(2px);
-    }
-
-    to {
-        transform: translateY(-8px);
-    }
-}
-
-#hand {
-    position: relative;
-    animation: 1000ms shake infinite linear alternate;
-    transform-origin: 80% 80%;
-    transform: translate(-10%, -10%);
-}
-
-@keyframes shake {
-    from {
-        transform: translate(-7.5%, -7.5%)rotateZ(2deg);
-    }
-    to {
-        transform: translate(-7.5%, -7.5%)rotateZ(-2deg);
-    }
-}
-
-#pen {
-    position: relative;
-    animation: 1000ms write infinite linear alternate;
-}
-
-@keyframes write {
-    from {
-        transform: translateX(-2px);
-    }
-
-    to {
-        transform: translateX(2px);
-    }
-}
-
-@media screen and (max-width: 600px) {
-    svg {
-        width: 80%;
-    }
+.active {
+    transform: scale(1.15);
+    z-index: 2;
+    border-radius: 15px;
 }

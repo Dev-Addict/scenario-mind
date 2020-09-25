@@ -1,22 +1,14 @@
 export const SET_QUESTIONS = 'SET_QUESTIONS';
 export const SET_ANSWER = 'SET_ANSWER';
 
-export interface Question {
-    text: string;
-    option1: string;
-    option2: string;
-    option3: string;
-    option4: string
-}
-
 interface SetQuestions {
     type: typeof SET_QUESTIONS;
-    payload: Question[];
+    payload: string[];
 }
 
 export type AnswerPayload = {
     index: number;
-    answer: 1|2|3|4;
+    answer: 1|2|3|4|5;
 }
 
 interface SetAnswer {
@@ -25,8 +17,8 @@ interface SetAnswer {
 }
 
 export interface QuestionsState {
-    questions: Question[];
-    answers: (1|2|3|4|undefined)[];
+    questions: string[];
+    answers: (1|2|3|4|5|undefined)[];
 }
 
 export type QuestionsActionTypes = SetQuestions | SetAnswer;

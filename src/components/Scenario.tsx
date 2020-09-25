@@ -3,7 +3,6 @@ import {useParams} from 'react-router-dom';
 import {useSelector} from "react-redux";
 
 import history from "../history";
-import Think from "../assets/Think";
 import {RootState} from "../store";
 
 const Scenario: FC = () => {
@@ -15,12 +14,11 @@ const Scenario: FC = () => {
         setTimeout(() => {
             history.push(`/answer/${index}`);
         }, 9000);
-    }, []);
+    }, [index]);
 
     return (
         <div className="route">
-            <div>{questions[+index - 1].text}</div>
-            <Think/>
+            <div>{questions[+index - 1]}</div>
         </div>
     );
 };

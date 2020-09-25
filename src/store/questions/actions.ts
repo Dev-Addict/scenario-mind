@@ -1,6 +1,6 @@
-import {AnswerPayload, Question, QuestionsActionTypes, SET_ANSWER, SET_QUESTIONS} from "./types";
+import {AnswerPayload, QuestionsActionTypes, SET_ANSWER, SET_QUESTIONS} from "./types";
 
-export const setQuestions = (questions: Question[]): QuestionsActionTypes => ({
+export const setQuestions = (questions: string[]): QuestionsActionTypes => ({
     type: SET_QUESTIONS,
     payload: questions
 });

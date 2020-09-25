@@ -37,11 +37,6 @@ function App() {
                     </Route>
                 </Switch>
             </div>
-            <div className="footer container">
-                created and designed by
-                {/* eslint-disable-next-line react/jsx-no-target-blank */}
-                <a href="https://github.com/Dev-Addict" target="_blank" className="button">Dev Addict</a>
-            </div>
         </Router>
     );
 }
