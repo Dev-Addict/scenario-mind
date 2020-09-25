@@ -83,3 +83,8 @@ html, body {
     z-index: 2;
     border-radius: 15px;
 }
+
+.end-frame {
+    height: 100%;
+    width: 100%;
+}

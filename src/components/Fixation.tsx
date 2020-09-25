@@ -18,7 +18,7 @@ const Fixation: FC<Props> = ({isRest = false}) => {
         setTimeout(() => {
             if (isRest) {
                 if (+index === length)
-                    history.push('/result');
+                    history.push('/finalrest');
                 else
                     history.push(`/ready/${+index + 1}`);
             } else

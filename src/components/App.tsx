@@ -11,12 +11,20 @@ import Instruction from "./Instruction";
 import Fixation from "./Fixation";
 import Scenario from "./Scenario";
 import Answer from "./Answer";
+import FinalRest from "./FinalRest";
+import Result from "./Result";
 
 function App() {
     return (
         <Router history={history}>
             <div>
                 <Switch>
+                    <Route path="/result">
+                        <Result/>
+                    </Route>
+                    <Route path="/finalrest">
+                        <FinalRest/>
+                    </Route>
                     <Route path="/rest/:index">
                         <Fixation isRest={true}/>
                     </Route>

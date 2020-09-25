@@ -13,7 +13,7 @@ export const questionsReducer = (state = initialState, action: QuestionsActionTy
                 answers: new Array(action.payload.length)
             };
         case SET_ANSWER:
-            const answers = {...state.answers};
+            const answers = [...state.answers];
             answers[action.payload.index] = action.payload.answer;
 
             return {
