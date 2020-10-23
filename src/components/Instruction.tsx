@@ -11,7 +11,7 @@ const Instruction: FC = () => {
 
     return (
         <div className="route">
-            خود انتقا گری
+            سعی کنید خود را در موقعیت مطرح شده تصور کنید
         </div>
     );
 };
