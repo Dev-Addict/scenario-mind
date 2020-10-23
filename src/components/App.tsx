@@ -13,6 +13,7 @@ import Scenario from "./Scenario";
 import Answer from "./Answer";
 import FinalRest from "./FinalRest";
 import Result from "./Result";
+import KInstruction from "./KInstruction";
 
 function App() {
     return (
@@ -39,6 +40,9 @@ function App() {
                     </Route>
                     <Route path="/instruction">
                         <Instruction/>
+                    </Route>
+                    <Route path="/kinstruction">
+                        <KInstruction/>
                     </Route>
                     <Route path="/">
                         <Start/>

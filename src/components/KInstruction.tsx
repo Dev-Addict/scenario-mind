@@ -2,15 +2,15 @@ import React, {FC, useEffect} from "react";
 
 import history from "../history";
 import {setQuestions} from "../store/questions/actions";
-import {questions} from "../data";
+import {kQuestions} from "../data";
 import {useDispatch} from "react-redux";
 import {AppDispatch} from "../store";
 
-const Instruction: FC = () => {
+const KInstruction: FC = () => {
     const dispatch = useDispatch<AppDispatch>();
 
     useEffect(() => {
-        dispatch(setQuestions(questions));
+        dispatch(setQuestions(kQuestions));
         setTimeout(() => {
             history.push('/ready/1');
         }, 1700);
@@ -23,4 +23,4 @@ const Instruction: FC = () => {
     );
 };
 
-export default Instruction;
+export default KInstruction;
