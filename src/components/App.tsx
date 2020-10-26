@@ -8,12 +8,13 @@ import {
 import history from "../history";
 import Start from "./Start";
 import Instruction from "./Instruction";
+import KInstruction from "./KInstruction";
+import EInstruction from "./EInstruction";
 import Fixation from "./Fixation";
 import Scenario from "./Scenario";
 import Answer from "./Answer";
 import FinalRest from "./FinalRest";
 import Result from "./Result";
-import KInstruction from "./KInstruction";
 
 function App() {
     return (
@@ -43,6 +44,9 @@ function App() {
                     </Route>
                     <Route path="/kinstruction">
                         <KInstruction/>
+                    </Route>
+                    <Route path="/einstruction">
+                        <EInstruction/>
                     </Route>
                     <Route path="/">
                         <Start/>

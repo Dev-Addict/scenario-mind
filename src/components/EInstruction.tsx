@@ -6,7 +6,7 @@ import {questions} from "../data";
 import {useDispatch} from "react-redux";
 import {AppDispatch} from "../store";
 
-const Instruction: FC = () => {
+const EInstruction: FC = () => {
     const dispatch = useDispatch<AppDispatch>();
 
     useEffect(() => {
@@ -18,9 +18,9 @@ const Instruction: FC = () => {
 
     return (
         <div className="route">
-            نسبت به موقعیت داده شده خودانتقادگر باشید
+            نسبت به موقعیت داده شده خوداطمینان بخش باشید
         </div>
     );
 };
 
-export default Instruction;
+export default EInstruction;

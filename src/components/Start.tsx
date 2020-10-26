@@ -10,6 +10,9 @@ const Start: FC = () => {
             <Link to="/kinstruction" className="button fill main start">
                 خنثی
             </Link>
+            <Link to="/einstruction" className="button fill main start">
+                اطمینان
+            </Link>
         </div>
     );
 };
