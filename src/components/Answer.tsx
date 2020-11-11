@@ -18,7 +18,7 @@ const Answer: FC = () => {
     useEffect(() => {
         setTimeout(() => {
             history.push(`/rest/${index}`);
-        }, 4000);
+        }, 3000);
     }, [index]);
 
     const setAnswerState = (answer: (1|2|3|4|5)) => {

@@ -13,7 +13,7 @@ const Scenario: FC = () => {
     useEffect(() => {
         setTimeout(() => {
             history.push(`/answer/${index}`);
-        }, 9000);
+        }, 6000);
     }, [index]);
 
     return (

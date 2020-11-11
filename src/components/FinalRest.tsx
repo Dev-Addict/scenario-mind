@@ -7,7 +7,7 @@ const FinalRest = () => {
     useEffect(() => {
         setTimeout(() => {
             history.push('result')
-        }, 14000)
+        }, 0)
     }, []);
 
     return (

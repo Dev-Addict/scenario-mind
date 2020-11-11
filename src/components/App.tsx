@@ -8,8 +8,6 @@ import {
 import history from "../history";
 import Start from "./Start";
 import Instruction from "./Instruction";
-import KInstruction from "./KInstruction";
-import EInstruction from "./EInstruction";
 import Fixation from "./Fixation";
 import Scenario from "./Scenario";
 import Answer from "./Answer";
@@ -28,7 +26,7 @@ function App() {
                         <FinalRest/>
                     </Route>
                     <Route path="/rest/:index">
-                        <Fixation isRest={true}/>
+                        <Fixation/>
                     </Route>
                     <Route path="/answer/:index">
                         <Answer/>
@@ -36,17 +34,8 @@ function App() {
                     <Route path="/scenario/:index">
                         <Scenario/>
                     </Route>
-                    <Route path="/ready/:index">
-                        <Fixation/>
-                    </Route>
-                    <Route path="/instruction">
+                    <Route path="/instruction/:type">
                         <Instruction/>
-                    </Route>
-                    <Route path="/kinstruction">
-                        <KInstruction/>
-                    </Route>
-                    <Route path="/einstruction">
-                        <EInstruction/>
                     </Route>
                     <Route path="/">
                         <Start/>
